@@ -5,33 +5,33 @@ import { Link } from 'react-router-dom';
 const slides = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80',
-    title: 'Summer Collection 2024',
-    subtitle: 'Discover the latest trends in fashion',
-    description: 'Up to 50% off on selected items',
-    cta: 'Shop Now',
-    link: '/products?category=summer',
-    bgColor: 'from-orange-400 to-pink-500'
+    image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&q=80',
+    title: 'AKUEB Past Papers',
+    subtitle: 'Expertly Solved Resources',
+    description: 'Latest past papers with detailed marking schemes for all subjects.',
+    cta: 'Shop Past Papers',
+    link: '/products?category=past-papers',
+    bgColor: 'from-emerald-500 to-teal-600'
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200&q=80',
-    title: 'Premium Electronics',
-    subtitle: 'Latest gadgets at unbeatable prices',
-    description: 'Fast delivery across Karachi',
-    cta: 'Explore',
-    link: '/products?category=electronics',
-    bgColor: 'from-blue-500 to-cyan-500'
+    image: 'https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?w=1200&q=80',
+    title: 'Comprehensive Notes',
+    subtitle: 'Simplified for Success',
+    description: 'High-quality notes covering the entire AKUEB syllabus.',
+    cta: 'Browse Notes',
+    link: '/products?category=notes',
+    bgColor: 'from-blue-500 to-indigo-600'
   },
   {
     id: 3,
-    image: 'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=1200&q=80',
-    title: 'Home & Living',
-    subtitle: 'Transform your space',
-    description: 'Up to 30% off on home essentials',
-    cta: 'View Collection',
-    link: '/products?category=home',
-    bgColor: 'from-green-500 to-emerald-600'
+    image: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=1200&q=80',
+    title: 'Full Bundle Deals',
+    subtitle: 'Best Value Preparation',
+    description: 'Get Past Papers, Notes, and SLOs in one discounted pack.',
+    cta: 'View Bundles',
+    link: '/products?category=bundles',
+    bgColor: 'from-orange-500 to-red-600'
   }
 ];
 

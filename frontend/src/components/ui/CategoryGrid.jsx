@@ -2,52 +2,28 @@ import { Link } from 'react-router-dom';
 
 const defaultCategories = [
   {
-    _id: '1',
-    name: 'Electronics',
-    image: 'https://images.unsplash.com/photo-1498049794561-7780e7231661?w=400&q=80',
-    count: 156
+    _id: 'past-papers',
+    name: 'Past Papers',
+    image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&q=80',
+    count: 0
   },
   {
-    _id: '2',
-    name: 'Fashion',
-    image: 'https://images.unsplash.com/photo-1445205170230-053b83016050?w=400&q=80',
-    count: 234
+    _id: 'notes',
+    name: 'Notes',
+    image: 'https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?w=400&q=80',
+    count: 0
   },
   {
-    _id: '3',
-    name: 'Home & Living',
-    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80',
-    count: 89
+    _id: 'slos',
+    name: 'SLOs',
+    image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=400&q=80',
+    count: 0
   },
   {
-    _id: '4',
-    name: 'Beauty',
-    image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&q=80',
-    count: 167
-  },
-  {
-    _id: '5',
-    name: 'Sports',
-    image: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=400&q=80',
-    count: 78
-  },
-  {
-    _id: '6',
-    name: 'Books',
-    image: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&q=80',
-    count: 312
-  },
-  {
-    _id: '7',
-    name: 'Toys',
-    image: 'https://images.unsplash.com/photo-1558060370-d644479cb6f7?w=400&q=80',
-    count: 145
-  },
-  {
-    _id: '8',
-    name: 'Automotive',
-    image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=400&q=80',
-    count: 67
+    _id: 'bundles',
+    name: 'Bundles',
+    image: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=400&q=80',
+    count: 0
   }
 ];
 
