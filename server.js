@@ -44,7 +44,7 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
-const eventsRoute = require("./routes/eventsRoute");
+const eventsRoute = require("/api/events.js");
 app.use('/api/events', eventRoutes);
 app.use(errorHandler);
 
