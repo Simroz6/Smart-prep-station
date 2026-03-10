@@ -1,37 +1,37 @@
-const express = require("express");
-const serverless = require("serverless-http"); // Wrap Express for serverless
-const router = express.Router();
-const app = express();
+export default function handler(req, res) {
+  const { method, query, body } = req;
 
-app.use(express.json());
+  switch (method) {
+    case "GET":
+      if (query.id) {
+        // GET /api/events/:id
+        res.status(200).json({ message: `Fetch event with id ${query.id}` });
+      } else {
+        // GET /api/events
+        res.status(200).json({ message: "Fetch all events" });
+      }
+      break;
 
-// Routes
-router.get("/", (req, res) => {
-  res.json({ message: "Events API working" });
-});
+    case "POST":
+      // Create event
+      res.status(201).json({
+        message: "Event created",
+        event: { ...body }
+      });
+      break;
 
-router.get("/:id", (req, res) => {
-  res.json({ message: `Fetch event with id ${req.params.id}` });
-});
+    case "PUT":
+      if (!query.id) return res.status(400).json({ message: "Event ID required" });
+      res.status(200).json({ message: `Event ${query.id} updated` });
+      break;
 
-router.post("/", (req, res) => {
-  const { title, description, date } = req.body;
-  res.status(201).json({
-    message: "Event created",
-    event: { title, description, date }
-  });
-});
+    case "DELETE":
+      if (!query.id) return res.status(400).json({ message: "Event ID required" });
+      res.status(200).json({ message: `Event ${query.id} deleted` });
+      break;
 
-router.put("/:id", (req, res) => {
-  res.json({ message: `Event ${req.params.id} updated` });
-});
-
-router.delete("/:id", (req, res) => {
-  res.json({ message: `Event ${req.params.id} deleted` });
-});
-
-// Mount router
-app.use("/", router);
-
-// Export as serverless function
-module.exports = serverless(app);
+    default:
+      res.setHeader("Allow", ["GET", "POST", "PUT", "DELETE"]);
+      res.status(405).end(`Method ${method} Not Allowed`);
+  }
+}
